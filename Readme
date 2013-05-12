@@ -1,0 +1,49 @@
+Grupo : 14
+Integrantes :
+  Hector Dominguez 	- Carnet: 09-10241
+  Miguel Fagundez 	- Carnet: 09-10264
+
+Decisiones de implementacion: 
+
+1. - Se decidio que si se queria encontrar la pregunta crucial entre dos predicciones iguales 
+solo se muestra por pantalla que las mismas son iguales y no se realiza la operacion
+
+2. - Se tomo la decision de que sea sensible a mayusculas en la opcion de consultar 
+pregunta crucial, es decir:
+
+  Si tengo una prediccion "a" y se busca la prediccion "A" entonces no se 
+  encontrara (o al menos no llegara a la que tenia el valor de "a") ya que es 
+  sensible a mayusculas
+
+3. - Algunas funciones se hicieron con recursion de cola dado que fue una recomendacion 
+clara de parte de los profesores, sin embargo, hay algunas que no son recursivas de 
+cola (Esto es debido a que tambien se hizo la recomendacion de que no era necesario 
+tener todas las funciones como recursion de cola sino eran de simple implementacion de esta manera)
+
+4.- Si se da en la opcion de "Cargar" un nombre de archivo invalido entonces, el programa termina.
+En relacion a esta opcion, el archivo ingresado por el usuario sobreescribe el oraculo 
+manejado al momento de seleccionar dicha opcion. Es decir, borra los datos del oraculo y 
+le asigna los datos del archivo ingresado.
+
+5. - Las estadisticas se muestran en este formato (minimo, maximo, promedio) Considerando los 3 datos 
+en relacion a las preguntas hechas para llegar a una prediccion. En relacion a esto, si el Oraculo
+es una prediccion, entonces se mostrara (0,0,0.0), pues por definicion, no hay preguntas que hacer.
+
+6. - Se implemento una opcion de "salir" del programa que no estaba contemplada en el 
+enunciado pero resultaba mas comoda para la interaccion del usuario si queria  culminar la ejecucion.
+
+7. - En el caso en que se seleccione la opcion 3 (persistir) y el archivo no se encuentre en el directorio
+actual este es creado y es almacenada la informacion. En el caso en que este ya se encuentre, se
+sobreescribe. En relacion a esta misma opcion, en caso de que el oraculo se encuentre "vacio" 
+se escribe en el archivo : "".
+
+8. - Se considero mostrar un mensaje: "No hay oraculo" cuando se procedia a realizar algunas de las
+siguientes operaciones: 5 (Consultar pregunta crucial), 6 (Consultar estadisticas); pues el 
+enunciado no especifico si esta operacion era o no valida.
+
+9. - Se consideraron que las unicas 2 respuestas aceptables a las preguntas del oraculo fueron 
+"si" y "no" asi como se muestra aqui de manera que tienen que estar completamente en minusculas
+
+10. - Las instancias de las clases Show y Read utilizadas son las que proporciona Haskell por defecto
+con el uso de la definicion de tipos con registros.
+
